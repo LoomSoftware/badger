@@ -12,7 +12,7 @@ Add version badges to your project README file.
 ## Installation
 
 ```shell
-composer require loomlabs/badger
+composer require loomsoftware/badger
 ```
 
 ## Usage

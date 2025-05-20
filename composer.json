@@ -1,0 +1,18 @@
+{
+  "name": "loomlabs/badger",
+  "description": "Easily add custom badges to your README.",
+  "autoload": {
+    "psr-4": {
+      "Loom\\Badger\\": "src/"
+    }
+  },
+  "require": {
+    "symfony/console": "^7.2"
+  },
+  "scripts": {
+    "badge": "./bin/badger badge:version . && ./bin/badger badge:license ."
+  },
+  "bin": ["bin/badger"],
+  "version": "1.0.4",
+  "license": "GPL-3.0-or-later"
+}

@@ -1,0 +1,27 @@
+#!/usr/bin/env php
+<?php
+
+$autoloadPaths = [
+    dirname(__DIR__). '/vendor/autoload.php',
+    sprintf('%s/autoload.php', dirname(__DIR__, 3))
+];
+
+foreach ($autoloadPaths as $autoloadPath) {
+    if (file_exists($autoloadPath)) {
+        require_once $autoloadPath;
+        break;
+    }
+}
+
+$application = new \Symfony\Component\Console\Application();
+
+$application->add(new \Loom\Badger\VersionBadge());
+$application->add(new \Loom\Badger\LicenseBadge());
+$application->add(new \Loom\Badger\CoverageBadge());
+
+try {
+    $application->run();
+} catch (Exception $e) {
+    echo $e->getMessage();
+    exit(1);
+}

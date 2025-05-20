@@ -1,5 +1,5 @@
 {
-  "name": "loomlabs/badger",
+  "name": "loomsoftware/badger",
   "description": "Easily add custom badges to your README.",
   "autoload": {
     "psr-4": {
@@ -13,6 +13,6 @@
     "badge": "./bin/badger badge:version . && ./bin/badger badge:license ."
   },
   "bin": ["bin/badger"],
-  "version": "1.0.4",
+  "version": "1.0.0",
   "license": "GPL-3.0-or-later"
 }
